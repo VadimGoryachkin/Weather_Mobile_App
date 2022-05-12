@@ -1,5 +1,5 @@
-import react from "react";
-import { View, Text, Button, StyleSheet, Image } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 
 export default function WelcomePage({ navigation }) {
@@ -28,16 +28,9 @@ export default function WelcomePage({ navigation }) {
             <View style={styles.fortext}>
 
                 <Text style={styles.text3}>
-                    Для того, чтобы получить прогноз погоды, нажмите кнопку "Далее"
+                    Для того, чтобы получить прогноз погоды, разрешите геопозицию
                 </Text>
 
-            </View>
-
-            <View style={styles.forbutton}>
-                <Button
-                    title="Далее"
-                    color={'green'}
-                    onPress={loadScene} />
             </View>
         </View>
     );
@@ -84,8 +77,5 @@ const styles = StyleSheet.create({
         height: '90%',
         alignItems: 'center',
         justifyContent: 'center'
-    },
-    forbutton: {
-        paddingBottom: 40
     }
 });

@@ -1,8 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Alert } from 'react-native';
 import * as Location from 'expo-location';
-import App from './Navigator';
+import WelcomePage from './WelcomePage';
 import MainApp from './MainApp';
 import axios from 'axios';
 
@@ -41,7 +40,7 @@ export default class extends React.Component {
     render() {
         const { isLoading, temp, condition } = this.state;
         return (
-            isLoading ? <App /> : <MainApp temp={Math.round(temp)} condition={condition} />
+            isLoading ? <WelcomePage /> : <MainApp temp={Math.round(temp)} condition={condition} />
         );
     }
 }

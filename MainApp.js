@@ -71,20 +71,20 @@ const MainAppOptions = {
 export default function MainApp({ temp, condition }) {
     return (
         <LinearGradient
-            colors={MainAppOptions[condition].gradient}
+            colors={MainAppOptions["Clouds"].gradient}
             style={styles.container}>
             <StatusBar barStyle="light-content" />
             <View style={styles.halfContainer}>
-                <MaterialCommunityIcons name={MainAppOptions[condition].iconName} size={96} color="white" />
+                <MaterialCommunityIcons name={MainAppOptions["Clouds"].iconName} size={96} color="white" />
                 <Text style={styles.temp}>{temp}°</Text>
             </View>
             <View style={styles.halfContainer}>
                 <View style={styles.textstyle}>
                     <Text style={styles.header}>
-                        {MainAppOptions[condition].header}
+                        {MainAppOptions["Clouds"].header}
                     </Text>
                     <Text style={styles.subheader}>
-                        {MainAppOptions[condition].subheader}
+                        {MainAppOptions["Clouds"].subheader}
                     </Text>
                 </View>
             </View>
